@@ -10,9 +10,9 @@ pandas.options.mode.copy_on_write = True
 parser = argparse.ArgumentParser(
     prog='robin hood profit',
     description="""RH UI is not obvious about profits per instrument.
-It is hard to see how much tax prepayment should trader do quaterly
-to keep IRS happy.
-""")
+
+    It is hard to see how much tax prepayment should trader do quaterly
+    to keep IRS happy.""")
 
 parser.add_argument('--tax',
                     default=0.24,
