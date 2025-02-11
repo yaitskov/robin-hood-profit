@@ -141,7 +141,8 @@ def find_end_of_year_shares(df, instruments, year):
     return result
 
 def instrument_profit(df, instrument, end_of_year):
-    df = df.loc[df['Instrument'] == instrument].loc[df['Code'].isin(['Buy', 'Sell'])]
+    df = df.loc[df['Instrument'] == instrument]
+    df = df.loc[df['Code'].isin(['Buy', 'Sell'])]
     eoy = end_of_year.get(instrument) or {'Amount': 0, 'Shares': 0}
     # print('eoy %s' % eoy)
     cumsum = eoy['Amount']
