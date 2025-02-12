@@ -18,21 +18,30 @@ $ export PATH=$PATH:$PWD/result/bin
 
 ## Usage
 ```
-$ ./robin-hood-profit --rh_csv jan2025.csv 
-  Instrument      Profit  Fees      Div    Shares     AvgCost
-0        SPY  582.220886   0.0     0.00  71778.91  603.184118
-0        PBR    0.000000 -14.1  1181.37  22140.00   13.837500
-0        XOM    0.000000   0.0     0.00  42794.93  106.987325
+$ ./robin-hood-profit.py --rh_csv_dir . --tax 0.24 --standard-deduction 15000
+  Instrument       Profit  Fees      Div  Total Cost  Shares     AvgCost
+0        SPY  2492.616831   0.0     0.00    60348.00   100.0  603.480000
+0        PBR   114.238664 -14.1  1181.37    54240.27  3850.0   14.088382
+0        XOM  3204.229398   0.0     0.00       -0.00     0.0         NaN
+0          F   223.547910   0.0     0.00    43830.20  4480.0    9.783527
+0       SBUX     5.000000   0.0     0.00       -0.00     0.0         NaN
+0         BP    61.000000   0.0     0.00       -0.00     0.0         NaN
+0       NVDA  1443.000000   0.0     0.00       -0.00     0.0         NaN
 -------------------------------------------------------------------------
-Unknown codes:         [nan]
-Used instruments:      ['SPY' 'PBR' 'XOM']
+Unknown codes:         ['GDBP']
+Tax year:                    2025
+Used instruments:      ['SPY' 'PBR' 'XOM' 'F' 'SBUX' 'BP' 'NVDA']
 Debit + Credit:          30700.00
-Total shares cost:      136713.84
+Total shares cost:        8430.00
 Interest:                  633.35
-Fees and foreign tax:      -19.10
+Fees and foreign tax:      -24.10
 Total dividends:          1181.37
-Buy/Sell profit:           582.22
-Total profit:             2377.84
+Buy/Sell profit:          7543.63
+Total profit:             9334.25
 Tax income braket:           0.24
-Tax income:                570.68
+Tax income:                  0.00
+After tax:                9334.25
+Days:                          42
+After tax per day:         222.24
+
 ```
